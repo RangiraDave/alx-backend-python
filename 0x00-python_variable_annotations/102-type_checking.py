@@ -7,17 +7,17 @@ apply any necessary changes.
 from typing import Tuple, List, Mapping, Union, Any, TypeVar
 
 
-T = TypeVar('T')
-Res = Union[T, None]
-Def = Union[T, None]
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """
+    Given a tuple, return a list with the same elements,
+    but with each element repeated by factor.
+    """
+    zoomed_in: List = []
+    for item in lst:
+        zoomed_in += [item] * factor
+    return zoomed_in
 
 
-def zoom_array(dct: Mapping, key: Any, default: Def = None) -> Res:
-    """
-    Given a dictionary and a key, return the value of the key.
-    If the key does not exist, return None.
-    """
-    if key in dct:
-        return dct[key]
-    else:
-        return default
+arr = (12, 72, 91)
+zoom2x = zoom_array(arr)
+zoom3x = zoom_array(arr, 3)
