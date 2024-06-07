@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Annotating the below function's parameters and return values
 with the appropriate types.

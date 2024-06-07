@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Augmenting the code with the correct duck-typed annotations.
 """

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Adding a type annotation to the function,
 given a parameter and return values.
