@@ -4,14 +4,14 @@ Measure the runtime
 """
 
 import asyncio
-import random
-import time
-from typing import List
+from time import time
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
-    """
-    Function that measures the total execution time for wait_n
-    """
-    delays = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
-    return [await delay for delay in asyncio.as_completed(delays)]
+async_comprehension = __import__('1-async_comprehension').async_comprehension
+
+
+async def measure_runtime() -> float:
+    start_time = time()
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
+    end_time = time()
+    return end_time - start_time
