@@ -193,7 +193,8 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
 
     def test_public_repos_with_license(self) -> None:
         """
-        Test the public_repos method of GithubOrgClient class with license filter.
+        Test the public_repos method of GithubOrgClient class with
+        license filter.
         """
 
         self.assertEqual(
